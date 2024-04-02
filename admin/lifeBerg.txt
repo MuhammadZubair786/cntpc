@@ -1,0 +1,179 @@
+
+//USER REGISTER
+
+registerUser: {
+    docID:{
+        type: String,
+        required: true
+    }
+    fullname: {
+        type: String,
+        required: true,
+        
+    }
+    email: {
+        type: String,
+        required: true,
+
+    }
+    password: {
+        type: String,
+        required: true,
+
+    }
+    confirmPassword: {
+        type: String,
+        required: true,
+
+    },
+    userName: {
+        type: String,
+        required: true,
+        default: "",
+
+    },
+    userType: {
+        type: String,
+        enum: ["medical student", "junior doctor", "senior doctor", "other"],
+        default: "",
+    },
+    emailVerified: {
+        type: Boolean,
+        required: true,
+        default: false,
+    },
+    botName: {
+        type: String,
+        required: true,
+        default: ""
+    },
+    loginCount: {
+        type : Number ,
+        required: true,
+        default:0
+    },
+    dailyCheckins{
+        type:Number,
+        required: true,
+        default: 0
+    }
+    memberShip: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    userID: {
+        type: String,
+        required: true
+    }
+    
+    country: {
+        type:String,
+        required: true
+    }
+
+    city: {
+        type:String,
+        required: true
+    },
+    createdAt: {
+        type:Date,
+        default: new Date()
+    }
+
+    last_login_date{
+        type:Number,
+        required: true,
+        default:1
+    }
+
+}
+
+
+// Main GOAL
+
+mainGoals: {
+    
+    goalID: {
+        type: String,
+        required: true,
+        
+    }
+    goalName: {
+        type: String,
+        required: true,
+        
+    }
+    
+    
+}
+
+
+
+
+//ADD NEW GOALS
+
+
+addNewGoal: {
+
+        docID:{
+        type:String,
+        required:true
+        },
+
+        mainGoalID: {
+            type:String,
+            required: true
+        }
+        mainGoalName: {
+            type:String,
+            required: true
+        }
+
+        goalName: {
+            type:String,
+            required: true
+        }
+        
+        goalDescription: {
+            type:String,
+            required: true
+        }
+
+        achievmentType: {
+            type:String,
+            required: true
+        }
+
+        endDate: {
+            type: Number,
+            
+        }
+
+        achievmentPriority: {
+            type: Boolean,
+            required: true
+        }
+        achievmentType: {
+            type : String,
+            required: true,
+        }
+        isCompleted: {
+            type:Boolean,  
+            default:false
+        }
+        reminderWeekDays: {
+            type: Array,
+            required: true
+        }
+        reminderWeekTime: {
+            type: Array,
+            required: true
+        }
+
+        date: {
+            type: Date,  
+            default: new Date()
+        }
+
+}
