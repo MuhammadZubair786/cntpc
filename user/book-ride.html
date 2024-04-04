@@ -314,6 +314,54 @@
                           </div>
                         </div>
                       </div>
+                  
+
+                      <div class="row"  >
+                        <div class="col-md-3" id="distance_row" style="display: none;">
+                    
+                          <br/>
+                          <h4 style="display: inline;">Distance : </h4>
+  
+                        </div>
+                        <div class="col-md-3">
+                          <br/>
+                          
+                          <h4 style="display: inline;" id="distance_val">  </h4>
+  
+                        </div>
+                      </div>
+                    
+
+                     
+
+                      <div class="form-group" id="showplans" style="visibility: hidden;">
+                        <label for="planSelect">Select Plan:</label>
+                        <select class="form-control" id="planSelect" onchange="selectPlan(this)">
+                          <option value="" disabled selected>Select Plan</option>
+                          <option value="Normal">Normal</option>
+                          <option value="Pro">Pro</option>
+                          <option value="Lite">Lite</option>
+                        </select>
+                      </div>
+
+                      <div class="row"  >
+                        <div class="col-md-3" id="cost_row" style="display: none;">
+                        
+                       
+                          <h4 style="display: inline;">Estimated Cost : </h4>
+  
+                        </div>
+                        <div class="col-md-3">
+                         
+                          <h4 style="display: inline;" id="estimate_cost">  </h4>
+  
+                        </div>
+                      </div>
+                    </br>
+                   
+                    
+                   
+                     
 
                       <div class="form-group">
                         <button class="btn btn-success" id="createRide">
@@ -369,10 +417,13 @@
       type="text/javascript"
       src="https://maps.google.com/maps/api/js?key=AIzaSyCBcIqyF9MlONsxFqFrb1QHCTsxAFfwrhA&sensor=false&libraries=places"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBcIqyF9MlONsxFqFrb1QHCTsxAFfwrhA&libraries=geometry"></script>
     <script
       type="text/javascript"
       src="https://rawgit.com/Logicify/jquery-locationpicker-plugin/master/dist/locationpicker.jquery.js"
     ></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCBcIqyF9MlONsxFqFrb1QHCTsxAFfwrhA&sensor=false&libraries=geometry" type="text/javascript"></script> 
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
@@ -383,9 +434,6 @@
     <script src="./apis/book-ride.js"></script>
     <script src="./apis/logout.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://maps.google.com/maps/api/js?key=AIzaSyCBcIqyF9MlONsxFqFrb1QHCTsxAFfwrhA&sensor=false&libraries=places&callback=initMap"
-    ></script>
+  
   </body>
 </html>

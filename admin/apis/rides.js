@@ -8,6 +8,7 @@ db.collection("orders")
 
     result.forEach((item) => {
       let ride = item.data();
+      console.log(ride)
       console.log({ ride }, ride?.ride_start, !ride?.ride_start);
       $("#ridesTable").append(`
         <tr>
@@ -21,6 +22,16 @@ db.collection("orders")
                                     
                                     </div>
                                 </div>
+                                </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">
+                                  ${ride.userFirstname} ${ride.userLastname}
+                                </p>
+                                </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                                  ride.useremail
+                                }</p>
                                 </td>
 
                                 <td>

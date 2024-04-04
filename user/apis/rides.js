@@ -32,6 +32,22 @@ db.collection("orders").where("userID", "==", JSON.parse(localStorage.getItem("u
                                   ride.driverName ?? ""
                                 }</p>
                                 </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                               
+                                  Number(ride.distance).toFixed(3)
+                                }Km</p>
+                                </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                                  Number(ride.calculatTransfer).toFixed(3)
+                                }</p>
+                                </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                                  ride.planName
+                                }</p>
+                                </td>
 
 
                                 <td>
@@ -52,8 +68,8 @@ db.collection("orders").where("userID", "==", JSON.parse(localStorage.getItem("u
                                     : ride?.ride_start == false
                                     ? `<td>
                                           <span><b>
-                                        <button class='btn btn-success' id='${ride.orderID}' onclick='SendTransfer(this)'>
-                                          Transfer Amount</button></b></span>                                    
+                                       
+                                          Transfer SucessFully</b></span>                                    
                                         </td>`
                                     : `<td>
                                             <span>Transfer did not started</span>
