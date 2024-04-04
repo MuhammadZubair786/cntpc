@@ -14,7 +14,7 @@
       href="./assets/img/apple-icon.png"
     />
     <link rel="icon" type="image/png" href="./media/LogoWithoutText.jpeg" />
-    <title>CNTPC - User</title>
+    <title>CNTPC - Rides</title>
     <!--     Fonts and icons     -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
@@ -209,7 +209,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link  " href="./rides.html">
+            <a class="nav-link " href="./rides.html">
                 <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>office</title>
@@ -230,7 +230,7 @@
             </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="./users.html">
+            <a class="nav-link" href="./users.html">
               <div
                 class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center"
               >
@@ -297,7 +297,28 @@
             </a>
             </li>
 
-         
+            <li class="nav-item">
+                <a class="nav-link active " href="./Plans.html">
+                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                    <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>office</title>
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                            <g transform="translate(1716.000000, 291.000000)">
+                            <g id="office" transform="translate(153.000000, 2.000000)">
+                                <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                                <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                            </g>
+                            </g>
+                        </g>
+                        </g>
+                    </svg>
+                    </div>
+                    <span class="nav-link-text ms-1">Plans</span>
+                </a>
+                </li>
+    
+        
         </ul>
       </div>
     </aside>
@@ -312,7 +333,7 @@
       >
         <div class="container-fluid py-1 px-3">
           <nav aria-label="breadcrumb">
-            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+            <h6 class="font-weight-bolder mb-0">Plans</h6>
           </nav>
           <div
             class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
@@ -353,8 +374,8 @@
                       class="dropdown-item border-radius-md"
                       onclick="logout()"
                     >
-                                            <span><i class="fa fa-sign-out"> </i> </span> Logout
-                  </div>
+                      <span><i class="fa fa-sign-out"> </i> </span> Logout
+                    </div>
                   </li>
                 </ul>
               </li>
@@ -368,14 +389,12 @@
           <div class="col-lg-12 mb-lg-0 mb-4">
             <div class="card">
               <div class="card-header pb-0">
-                <div style="float: right">
-                  <a href="./add-user.html" class="btn btn-secondary"
-                    >+ Add User</a
-                  >
-                </div>
+                <!-- <div style="float: right;">
+                    <a href="./add-user.html" class="btn btn-secondary">+ Add User</a>
+                </div> -->
                 <div class="row">
                   <div class="col-lg-12 col-12">
-                    <h6>Users</h6>
+                    <h6>Plans</h6>
 
                     <div class="card-body px-0 pb-2">
                       <div class="table-responsive">
@@ -385,32 +404,34 @@
                               <th
                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                               >
-                                First Name
+                                S.No
                               </th>
                               <th
                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
                               >
-                                Last Name
+                                Plan Id
                               </th>
                               <th
                                 class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
                               >
-                                Email
+                                Plan Name
                               </th>
                               <th
-                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-                              >
-                                Phone No
-                              </th>
+                              class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
+                            >
+                              Plan Multipler
+                            </th>
+                              
 
+                            
                               <th
                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                               >
-                                Status
+                                Action
                               </th>
                             </tr>
                           </thead>
-                          <tbody id="usersTable">
+                          <tbody id="planTable">
                             <!-- <tr>
                                 <td>
                                 <div class="d-flex px-2 py-1">
@@ -473,10 +494,102 @@
             </div>
           </div>
         </footer>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="assignRideToDriverModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="assignRideToDriverModalTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="assignRideToDriverModalTitle">
+                  Assign Driver
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  id="closeassignRiderButton"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="driverList"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map MODAL -->
+
+        <!-- <div
+          class="modal fade bd-example-modal-lg"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true"
+          id="liveTrackRiderModal"
+
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+              <h5 class="modal-title" id="">
+                Assign Driver
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                id=""
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="driverList"></div>
+          </div>
+        </div> -->
+
+        <div
+          class="modal fade bd-example-modal-lg"
+          id="liveTrackRiderModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="liveTrackDriverModalTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="">
+                  Track Driver
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  id="closeTrackButton"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="">
+                <div id="liveTrackMap" style="height: 400px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
     <!--   Core JS Files   -->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCBcIqyF9MlONsxFqFrb1QHCTsxAFfwrhA&sensor=false&libraries=places"></script>
+
     <script src="./assets/js/core/popper.min.js"></script>
     <script src="./assets/js/core/bootstrap.min.js"></script>
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -513,11 +626,11 @@
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
     <script src="./apis/firebase.js"></script>
-<script src="./apis/middleware.js"></script>
-<script src="./apis/logout.js"></script>
+    <script src="./apis/middleware.js"></script>
+    <script src="./apis/logout.js"></script>
 
-<script src="./apis/login.js"></script>
-                      
-    <script src="./apis/users.js"></script>
+    <script src="./apis/login.js"></script>
+
+    <script src="./apis/plans.js"></script>
   </body>
 </html>

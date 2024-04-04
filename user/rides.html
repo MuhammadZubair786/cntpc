@@ -379,6 +379,50 @@
         <!--  -->
 
 
+        <div class="modal fade" id="transferModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Transfer</h5>
+                <button type="button" id="closeTransfer" class="close btn" style="font-size: 20px;" 
+                data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="planSelect">Select Plan:</label>
+                  <select class="form-control" id="planSelect" onchange="selectPlan(this)">
+                    <option value="" disabled selected>Select Plan</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Pro">Pro</option>
+                    <option value="Lite">Lite</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row" id="pricetable" style="display: none;text-align: center;">
+               <table  style="width: 400px;text-align: center;font-weight: bold;">
+                <tr >
+                  <td>
+                    Price
+                  </td>
+                  <td id="price_show">
+                    
+                  </td>
+                </tr>
+               </table>
+             
+               <br/>
+            </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="sendTransferBtn">Send Transfer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <!-- Track Modal -->
         <div
           class="modal fade bd-example-modal-lg"

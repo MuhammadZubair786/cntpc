@@ -1,6 +1,16 @@
 let lat = 33.5889;
 let lng = 71.4429;
 
+let l1lat = $('#lat')
+let l1long = $('#lng')
+
+
+let l2lat = $('#lat')
+let l2long = $('#lng')
+
+
+
+
 $(function() {
 
     $('#us2').locationpicker({
@@ -10,6 +20,7 @@ $(function() {
         },
         radius: 0,
         inputBinding: {
+
             latitudeInput: $('#lat'),
             longitudeInput: $('#lng'),
             locationNameInput: $('#location')
@@ -44,3 +55,9 @@ $(function() {
 
 
 });
+
+function Transfer(){
+    console.log("test")
+    console.log(lat)
+    console.log(long)
+}
