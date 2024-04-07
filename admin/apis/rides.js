@@ -34,10 +34,16 @@ db.collection("orders")
                                 }</p>
                                 </td>
 
+                              
                                 <td>
                                 <p class="text-xs text-secondary mb-0">${
                                   ride.driverName
                                 }</p>
+                                </td>
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                                  ride.calculatTransfer
+                                }€</p>
                                 </td>
 
                                 <td>

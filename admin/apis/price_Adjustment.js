@@ -5,7 +5,7 @@ db.collection("Price_Adjusment")
         console.log("test")
         result.forEach((item) => {
             let price = item.data();
-            console.log(price)
+            console.log(price.Price_Id)
             $("#pricelTable").append(`
         <tr>
                                 <td>
@@ -31,12 +31,12 @@ db.collection("Price_Adjusment")
                                  price.Price
                                 }€/Km</p>
                                 </td>
-                                <td class='text-center'>
-                                <button class='btn btn-success'>
-                                Update</button>
-                                
-                                </td>
-                              
+                                <td>
+                                <p class="text-xs text-secondary mb-0">${
+                                    price.Price_Id
+                                   }</p>
+                                   </td>
+                           
                                 
                                 
 

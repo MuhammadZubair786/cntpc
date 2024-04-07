@@ -107,25 +107,84 @@ $("#carListForBooking").change(function () {
 
 function initMap() {
   var myLatLng = { lat: 24.9493505, lng: 67.0658986 };
+  var myLatLng2 = { lat: 24.9493505, lng: 67.0658986 };
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        function (position) {
+            // Get user's current position
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+             myLatLng = { lat: pos.lat, lng: pos.lng };
+             myLatLng2 = { lat: pos.lat, lng: pos.lng };
+            
+
+            // Center the map to the user's current position
+            map.setCenter(pos);
+        },
+        function () {
+            // Handle geolocation errors
+            handleLocationError(true, map.getCenter());
+        }
+    );
+}
+
+ 
   map = new google.maps.Map(document.getElementById("us2"), {
     center: myLatLng,
     zoom: 11,
   });
 
   mapFrom = new google.maps.Map(document.getElementById("us1"), {
-    center: myLatLng,
+    center: myLatLng2,
     zoom: 11,
   });
 
+  var customMarkerIcon = {
+    url: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png', // URL to your custom marker icon image
+    scaledSize: new google.maps.Size(32, 32), // Size of the marker icon
+  };
+
   geocoder = new google.maps.Geocoder();
 
-  map.addListener("click", function (event) {
-    getAddress(event.latLng, "to");
-  });
+  var marker;
+  var marker1;
 
-  mapFrom.addListener("click", function (event) {
-    getAddress(event.latLng, "from");
-  });
+
+// Listener for map click event
+map.addListener("click", function (event) {
+  // If marker already exists, update its position
+  if (marker) {
+    marker.setPosition(event.latLng);
+  } else {
+    // Otherwise, create a new marker
+    marker = new google.maps.Marker({
+      position: event.latLng,
+      map: map,
+      icon: customMarkerIcon, // Set custom marker icon
+    });
+  }
+  getAddress(event.latLng, "to");
+});
+
+// Listener for mapFrom click event
+mapFrom.addListener("click", function (event) {
+  // If marker already exists, update its position
+  if (marker1) {
+    marker1.setPosition(event.latLng);
+  } else {
+    // Otherwise, create a new marker
+    marker1 = new google.maps.Marker({
+      position: event.latLng,
+      map: mapFrom,
+      icon: customMarkerIcon, // Set custom marker icon
+    });
+  }
+  getAddress(event.latLng, "from");
+});
 }
 
 function getAddress(latLng, type) {
@@ -167,7 +226,7 @@ function getAddress(latLng, type) {
          document.getElementById("distance_val").innerText = distance.toString().substring(0,5)+"Km"
          bookRide.distance=distance
          if (distance < 300) {
-          await db.collection("Price_Adjusment").where("Km", "==", "Below 300")
+          await db.collection("plan").where("Km", "==", "Below 300")
               .get()
               .then((querySnapshot) => {
                   console.log(querySnapshot)
@@ -228,9 +287,11 @@ function getAddress(latLng, type) {
   });
 }
 
+//for calculate distance
 function calcDistance (fromLat, fromLng, toLat, toLng) {
-  return google.maps.geometry.spherical.computeDistanceBetween(
+  var disc =  google.maps.geometry.spherical.computeDistanceBetween(
     new google.maps.LatLng(fromLat, fromLng), new google.maps.LatLng(toLat, toLng));
+    return disc/1000;
 }
 
 async function selectPlan(e) {
